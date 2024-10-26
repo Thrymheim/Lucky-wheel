@@ -1,4 +1,4 @@
-
+![Lucky Wheel Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRohg9M-qmZhrwiuUSURDnvpaJEA0-oR5-V7w&s)
 
 # Lucky Wheel
 

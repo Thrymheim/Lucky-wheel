@@ -1,0 +1,113 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+@keyframes zoom-in {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes BounceEnterBottom {
+	0% {
+		transform: scaleY(0);
+		transform-origin: 100% 0%;
+	}
+
+	100% {
+		transform: scaleY(1);
+		transform-origin: 100% 0%;
+	}
+}
+
+.animattt {
+    animation: BounceEnterBottom .8s ease 0s 1 normal forwards;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 500px;
+    height: 500px;
+    animation: zoom-in .5s ease-out;
+    transform-origin: center;
+}
+
+.main .spin-btn{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: 3.5px solid gray;
+    cursor: pointer;
+    user-select: none;
+}
+
+.arrow{
+    content: '';
+    position: absolute;
+    left: -24px;
+    width: 25px;
+    height: 35px;
+    transform: rotate(-90deg);
+    background: white;
+    clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.main .spin-wheel{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px #333 , 0 0 0 15px #fff , 0 0 0 18px #111;
+    overflow: hidden;
+    transition: transform 5s ease-in-out;
+}
+
+.main .spin-wheel .number{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background: var(--clr);
+    transform-origin: bottom right;
+    transform: rotate(calc(45deg * var(--i)));;
+    clip-path: polygon(0 0, 57% 0, 100% 100%, 0 57%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: default;
+}
+
+.main .spin-wheel .number span{
+    position: relative;
+    transform: rotate(45deg);
+    font-size: 1.5rem;
+    font-weight: bold;
+}

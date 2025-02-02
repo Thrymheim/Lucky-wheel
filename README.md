@@ -27,7 +27,7 @@ To get started with the Lucky Wheel project, follow these steps:
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/lucky-wheel.git
+   git clone https://github.com/Thrymheim/lucky-wheel.git
    ```
 
 2. **Open the Project Folder**
